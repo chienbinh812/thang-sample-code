@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: thang-java
+  profiles:
+    active: @spring.profiles.active@
+
+---
+spring:
+  config:
+    ativate:
+      on-profile: dev
+openapi:
+  service:
+    api-docs: api-service
+    server: http://localhost:8080
+    title: API Service
+    version: 1.0.0
+
+---
+spring:
+  config:
+    ativate:
+      on-profile: test
+openapi:
+  service:
+    api-docs: api-service
+    server: http://localhost:8081
+    title: API Service
+    version: 1.0.0
+
+---
+spring:
+  config:
+    ativate:
+      on-profile: prod
+openapi:
+  service:
+    api-docs: api-service
+    server: http://localhost:8082
+    title: API Service
+    version: 1.0.0
